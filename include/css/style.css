@@ -1,0 +1,102 @@
+/* Navigation */
+nav{
+    top: 40px;
+    position: relative;
+    background-color: #fff;
+    font-family: 'Poor Story', cursive;
+    font-weight: 500;
+    width: 50%;
+    height: 90%;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 1.5%;
+}
+
+nav li:hover{
+    
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    top: 10;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none!important;
+}
+
+nav li a:hover {
+    color: #fff;
+}
+
+main{
+    display: block;
+    background-color: blue;
+}
+
+.intro{
+    height: 400px;
+    background-color: blue;
+}
+
+.polymorph{
+    fill:#29ABE2;
+    height: 100px;
+}
+
+#cta, #cta2 {
+    position: absolute;
+    margin: 10em auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 30%;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: 0;
+}
+
+#blip p {
+    font-size: 1.2em;
+}
+
+#blip h1 {
+    font-size: 100px; 
+}
+
+#cta2 {
+    width: auto;
+    margin: 30px auto;
+    background: #29ABE2;
+}
+
+#blip {
+    position: absolute;
+    color: #29ABE2;
+    right: 50%;
+    top: 30%;
+    opacity: 0;
+    width: 30%;
+    transform: translateY(-800px);
+}
