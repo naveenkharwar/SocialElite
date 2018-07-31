@@ -167,7 +167,6 @@ main{
 
   #about p{
     padding: 10px;
-    color: #323648;
   }
 
 /* Services */
@@ -295,8 +294,8 @@ main{
     background : yellow;
     border-bottom:1px solid #ff8080;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 /* portfolio */
