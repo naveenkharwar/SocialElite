@@ -4,6 +4,30 @@
 
 section{
     margin: 12px;
+    margin-top: 100px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+p{
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif !important; 
+    color: #323648;
+    
+}
+
+h1{
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+    font-size: 3.5rem;
+    line-height: 1.15;
+    font-family: 'gil-sans';
+    font-weight: 600;
 }
 
 
@@ -80,7 +104,7 @@ main{
 
 #blip {
     position: absolute;
-    color: #29ABE2;
+    color: #29ABE2 !important;
     right: 50%;
     top: 30%;
     opacity: 0;
@@ -124,6 +148,8 @@ main{
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
+    box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
   }
 
 .about-2{
@@ -134,29 +160,19 @@ main{
     margin: 0 auto;
     width: 80%;
     height: 280px;
+    -webkit-box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
+    box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
 
   }
 
   #about p{
-    padding-top:20px;
-    color: grey;
+    padding: 10px;
+    color: #323648;
   }
 
 /* Services */
 
-#particles-js{
-    /* position: relative; */
-    position: absolute;
-    background:linear-gradient(0deg,rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.80)) ,url(include/img/maxresdefault.jpg) center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 30px;
-    height: 450px;
-    padding-bottom: 30px;
-    /* when in small screen size */
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-}
+
 
 .vertical-center {
     display: -webkit-box;
@@ -184,7 +200,8 @@ main{
 }
 
 #services{
-    color: #fff;
+    /* background: linear-gradient(360deg, #ffffff 30%, #29ABE2 70%);  */
+    margin-top: 50px;
 }
 
 #services h1 {
@@ -262,10 +279,10 @@ main{
 /* svg icons Style End*/
 
 #services .card{
-    opacity: 0.8;
     padding: 10px;
     color: #000;
     margin: 10px;
+    border: #fff;
 }
 
 #services .card h5{
@@ -275,7 +292,7 @@ main{
 .line-separator{
     width: 50%;
     height:2px;
-    background:#ff8080;
+    background : yellow;
     border-bottom:1px solid #ff8080;
     margin: 0 auto;
     margin-top: 20px;
@@ -285,6 +302,182 @@ main{
 /* portfolio */
 
 #portfolio{
-    background-color: #20D0C2;
+    height:300px;
 }
+
+/* Price chart */
+
+#price h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.price-chart{
+    margin: 0 auto;
+}
+
+#price .card em{
+    font-size: 70px;
+}
+
+#price .card h3{
+    text-align: center;
+}
+
+#price .card h2{
+    text-align: center;
+}
+
+#price .card h5{
+    font-size: 20px;
+    text-align: center;
+}
+
+#price .card p{
+    text-align: center;
+}
+
+#price .card{
+    padding: 16px;
+    -webkit-box-shadow: 0 2px 14px 0 rgba(50, 54, 72, 0.16);
+    box-shadow: 0 2px 14px 0 rgba(50, 54, 72, 0.16);
+    border-radius: 8px;
+
+    width:350px;
+    background: linear-gradient(-45deg,  #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    color: #fff;
+    font-weight: 300;
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+    margin:0 0 0 20px;
+}
+
+@-webkit-keyframes 
+    Gradient {
+	  0% {
+	 	background-position: 0% 50%
+	 }
+	 50% {
+		background-position: 100% 50%
+	 }
+	 100% {
+		background-position: 0% 50%
+	 }
+ }
+
+@-moz-keyframes 
+    Gradient {
+	 0% {
+		background-position: 0% 50%
+	 }
+	 50% {
+		background-position: 100% 50%
+	 }
+	 100% {
+		background-position: 0% 50%
+	 }
+ }
+
+@keyframes 
+    Gradient {
+	 0% {
+		background-position: 0% 50%
+	 }
+	 50% {
+		background-position: 100% 50%
+	 }
+	 100% {
+		background-position: 0% 50%
+	 }
+ }
+
+#price .card:hover {
     
+}
+  
+#price h6 {
+    font-family: 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+}
+
+#price svg{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#price .st0{
+    fill: #000;
+}
+
+.buy{
+    margin: 0 auto;
+    border: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    width: 60%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all .5s cubic-bezier(.25,.8,.25,1);
+}
+
+.buy:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.20), 0 10px 10px rgba(0,0,0,0.20); 
+}
+
+.buy a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+/* contact us */
+
+/* Style inputs with type="text", select elements and textareas */
+#contact input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+#contact input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+#contact input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+#contact .container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#contact .name{
+    display: inline-block;
+}
+
+#contact .password{
+    display: inline-block;
+}
+
+
