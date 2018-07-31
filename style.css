@@ -1,10 +1,14 @@
 /* html, body {
     height: 100%;
 } */
+body{
+    /* background-color: #fbfbfb; */
+}
 
 section{
     margin: 12px;
-    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -165,9 +169,6 @@ main{
 
   }
 
-  #about p{
-    padding: 10px;
-  }
 
 /* Services */
 
@@ -199,8 +200,9 @@ main{
 }
 
 #services{
-    /* background: linear-gradient(360deg, #ffffff 30%, #29ABE2 70%);  */
-    margin-top: 50px;
+    background: url('include/img/bg-services.svg') top center no-repeat;
+    background-attachment: fixed;
+    /* background-color: #0E7886; */
 }
 
 #services h1 {
@@ -281,7 +283,8 @@ main{
     padding: 10px;
     color: #000;
     margin: 10px;
-    border: #fff;
+    background-color: rgba(0, 0, 0, 0.14);
+    border-radius: 20%;
 }
 
 #services .card h5{
@@ -342,7 +345,7 @@ main{
     box-shadow: 0 2px 14px 0 rgba(50, 54, 72, 0.16);
     border-radius: 8px;
 
-    width:350px;
+    width:250px;
     background: linear-gradient(-45deg,  #EE7752, #E73C7E, #23A6D5, #23D5AB);
     color: #fff;
     font-weight: 300;
@@ -468,7 +471,6 @@ main{
 /* Add a background color and some padding around the form */
 #contact .container {
     border-radius: 5px;
-    padding: 20px;
 }
 
 #contact .name{
