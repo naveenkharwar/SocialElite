@@ -33,47 +33,87 @@
 
 <body>
 
-    <header>
-        <nav>
-            <!-- Navigation Start -->
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>/
-                <li>
-                    <a href="#about">About</a>
-                </li>/
-                <li>
-                    <a href="#services">Services</a>
-                </li>/
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>/
-                <li>
-                    <a href="#price">Price</a>
-                </li>/
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Header -->
 
     <div class="container-fluid">
-        <svg width=100% viewBox="0 0 405 150" preserveAspectRatio="none">
-            <polygon class="polymorph" points="405,219 0,219 0,0 70,0 77.5,0 107,0 405,0 " />
-        </svg>
-
-        <div id="blip">
-            <h1 id="blip-h1">social
-                <br> elite</h1>
-            <p>Isn't this cool? Here's a little more text to fill this space out a bit more.</p>
-        </div>
+        <input type="checkbox" id="xBxHack" />
+        <nav id="mainNav" class="mainNav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">Naveen
+                        <strong>Kharwar</strong>
+                    </a>
+                </div>
+                <label class="navBars" for="xBxHack">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <ul id="menu" class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Profolio</a>
+                    </li>
+                    <li>
+                        <a href="#price">Price</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
 
+
+
+    <!-- Header -->
+
+    <header>
+        <div class="container-fluid">
+            <svg width=100% viewBox="0 0 405 150" preserveAspectRatio="none">
+                <polygon class="polymorph" points="405,219 0,219 0,0 70,0 77.5,0 107,0 405,0 " />
+            </svg>
+            <!-- particle js -->
+            <div id="particles-js">
+                <h1 style="position: absolute;">We Are</h1>
+                <br />
+                <div id="app"></div>
+                <!-- Typewriter -->
+                <script src="include/js/typewriter.js"></script>
+
+                <script>
+                    var app = document.getElementById('app');
+
+                    var typewriter = new Typewriter(app, {
+                        loop: true
+                    });
+
+                    typewriter.typeString('Createive')
+                        .pauseFor(2500)
+                        .deleteAll()
+                        .typeString('Inovative')
+                        .pauseFor(2500)
+                        .deleteChars(7)
+                        .typeString('Friendly')
+                        .start();
+                </script>
+            </div>
+
+
+            <div id="blip">
+                <h1 id="blip-h1">Naveen
+                    <br> Kharwar</h1>
+                <p>Isn't this cool? Here's a little more text to fill this space out a bit more.</p>
+            </div>
+        </div>
+    </header>
 
 
     <!-- SVG Morphing and Animejs -->
@@ -99,14 +139,6 @@
         })
     </script>
 
-    <!-- tag line -->
-    <!-- 
-  <section id="tagline">
-    <div class="container-fluid">
-      <h1 id="tagline-h1">Moulding Dreams Into Reality</h1>
-    </div>
-  </section> -->
-
     <!-- About us -->
 
     <section id="about">
@@ -120,8 +152,12 @@
                     </p>
                 </div>
                 <div class="col-sm-6" data-aos="zoom-in-up">
-                    <img class="about-img1 img-responsive" src="include/img/about1.jpg">
-                    <img class="about-img1 img-responsive" src="include/img/about2.jpg">
+                    <div class="col-sm">
+                        <img class="about-img1 img-responsive" src="include/img/about1.jpg">
+                    </div>
+                    <div class="col-sm">
+                        <img class="about-img1 img-responsive" src="include/img/about2.jpg">
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,7 +188,7 @@
             <div class="vertical-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm">
                             <img class="service-icon" src="include/img/services-icon/051-computer-4.png" data-tilt>
                             <h6 class="cool-link">GRAPHIC DESIGNING</h6>
                             <img class="service-icon" src="include/img/services-icon/051-analytics-1.png" data-tilt>
@@ -163,7 +199,7 @@
                         <div class="col-5">
                             <img class="middle" src="include/img/laptop-desk-website-work.jpg" data-aos="fade-zoom-in">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <img class="service-icon" src="include/img/services-icon/051-megaphone.png" data-tilt>
                             <h6 class="cool-link">SOCIAL MEDIA MARKETING</h6>
                             <img class="service-icon" src="include/img/services-icon/051-world-map-1.png" data-tilt>
@@ -198,31 +234,42 @@
 
             <div class="filters-content">
                 <div class="row grid">
-                    <div class="col-sm-4 all corporate">
-                        <div class="item">
-                            <img src="http://themes.muffingroup.com/betheme/documentation/doc-images/muffin-options/custom-js.png" alt="Work 1">
-                            <div class="p-inner">
-                                <h5>Work 1</h5>
-                                <div class="cat">Corporate</div>
-                            </div>
+
+                    <div class="col-sm-4 all agency">
+                        <div class="work">
+                            <a href="#">
+                                <img src="include/img/work/dining-drink-food-1126728.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-sm-4 all agency corporate">
+                        <div class="work">
+                            <a href="#">
+                                <img src="include/img/work/blur-close-up-dairy-product-380954.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 all agency portal">
+                        <div class="work">
+                            <a href="#">
+                                <img src="include/img/work/blur-chilled-chocolate-919273.jpg">
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-4 all personal">
-                        <div class="item">
-                            <img src="http://themes.muffingroup.com/betheme/documentation/doc-images/muffin-options/custom-js.png" alt="Work 1">
-                            <div class="p-inner">
-                                <h5>Work 1</h5>
-                                <div class="cat">Personal</div>
-                            </div>
+                        <div class="work">
+                            <a href="#">
+                                <img src="include/img/work/black-coffee-breakfast-cake-709833.jpg">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-sm-4 all agency">
-                        <div class="item">
-                            <img src="http://themes.muffingroup.com/betheme/documentation/doc-images/muffin-options/custom-js.png" alt="Work 1">
-                            <div class="p-inner">
-                                <h5>Work 1</h5>
-                                <div class="cat">Agency</div>
-                            </div>
+
+                    <div class="col-sm-4 all agency corporate  portal">
+                        <div class="work">
+                            <a href="#">
+                                <img class="zoom" src="include/img/work/cones-food-food-photography-787666.jpg">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -443,52 +490,107 @@
     <!-- contact us section -->
 
     <section id="contact">
-        <div class="container try-it">
-            <h1 class="text-center" data-aos="fade-zoom-in">get in touch</h1>
-            <div class="line-separator"></div>
 
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="contact1-pic js-tilt" data-tilt>
-                        <img src="include/img/img-01.png">
+        <h1 class="text-center" data-aos="fade-zoom-in">get in touch</h1>
+        <div class="line-separator"></div>
+        <div class="">
+            <div class="container">
+                <div class="row try-it">
+                    <div class="col-sm-6">
+                        <div class="contact1-pic js-tilt" data-tilt>
+                            <img class="img-responsive" src="include/img/img-01.png">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <form action="/action_page.php" style="margin: 0 auto;">
-                        <div class="wrap-input1 validate-input">
-                            <input type="txt" class="form-control input1" id="email" placeholder="Name">
+                    <div class="col-sm-6">
+                        <form action="/action_page.php" style="margin: 0 auto;">
+                            <div class="wrap-input1 validate-input">
+                                <input type="txt" class="form-control input1" id="email" placeholder="Name">
+                            </div>
+
+                            <div class="wrap-input1 validate-input">
+                                <input type="email" class="form-control input1" id="pwd" placeholder="Email">
+                            </div>
+                            <div class="subject wrap-input1 validate-input">
+                                <input type="txt" class="form-control input1" id="pwd" placeholder="Subject">
+                            </div>
+                            <div class="wrap-input1 validate-input">
+                                <textarea class="input1" name="message" placeholder="Message"></textarea>
+                            </div>
+
+                        </form>
+
+                        <div class="container-contact1-form-btn">
+
+                            <button class="contact1-form-btn">
+                                <span>
+                                    Send Email
+                                    <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+                                </span>
+                            </button>
                         </div>
 
-                        <div class="wrap-input1 validate-input">
-                            <input type="email" class="form-control input1" id="pwd" placeholder="Email">
-                        </div>
-                        <div class="subject wrap-input1 validate-input">
-                            <input type="txt" class="form-control input1" id="pwd" placeholder="Subject">
-                        </div>
-                        <div class="wrap-input1 validate-input">
-                            <textarea class="input1" name="message" placeholder="Message"></textarea>
-                        </div>
-
-                    </form>
-
-                    <div class="container-contact1-form-btn">
-
-                        <button class="contact1-form-btn">
-                            <span>
-                                Send Email
-                                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
-                            </span>
-                        </button>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="include/img/Logo_TV_2015.png">
+                </div>
+                <div class="col-sm-3">
+                    <p>Unit 220, 2nd Floor
+                        <br />The Record Hall
+                        <br /> 16-16a Baldwin's Gardens
+                        <br /> London EC1N 7RJ</p>
+                    <p>
+                        <a href="#" class="underline">View Map</a>
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Contact us
+                        <br /> +91 9415633732
+                        <br />
+                        <a href="mailto:naveen@example.com" class="underline">naveen@example.com</a>
+                    </p>
+                    <p>Career
+                        <br />
+                        <a href="mailto:jobs@example.com" class="underline">jobs@example.com</a>
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#contact" class="underline">Hire us</a>
+                    </p>
+                    <p>
+                        <a href="#" class="underline">Privacy Policy</a>&nbsp;|&nbsp;© The Nuovo Group</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
 
     <!-- Gallery Filter -->
     <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
@@ -512,7 +614,50 @@
             }
         })
     </script>
+    <script>
+        $(document).ready(function() {
+            "use strict";
+            var myNav = {
+                init: function() {
+                    this.cacheDOM();
+                    this.browserWidth();
+                    this.bindEvents();
+                },
+                cacheDOM: function() {
+                    this.navBars = $(".navBars");
+                    this.xBxHack = $("#xBxHack");
+                    this.navMenu = $("#menu");
+                },
+                browserWidth: function() {
+                    $(window).resize(this.bindEvents.bind(this));
+                },
+                bindEvents: function() {
+                    var width = window.innerWidth;
 
+                    if (width < 600) {
+                        this.navBars.click(this.animate.bind(this));
+                        this.navMenu.hide();
+                        this.xBxHack[0].checked = false;
+                    } else {
+                        this.resetNav();
+                    }
+                },
+                animate: function(e) {
+                    var checkbox = this.xBxHack[0];
+                    !checkbox.checked ?
+                        this.navMenu.slideDown() :
+                        this.navMenu.slideUp();
+
+                },
+                resetNav: function() {
+                    this.navMenu.show();
+                }
+            };
+            myNav.init();
+        });
+    </script>
+    <!-- picBeautifier -->
+    <script src="https://cdn.rawgit.com/malditoprotozoo/picBeautifier-3000/dev/src/app.js"></script>
 
     <!-- tilt.jquery js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
@@ -527,9 +672,23 @@
         })
     </script>
 
+    <!-- particlejs -->
+    <script src="particles.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
     <!-- AOS Library -->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="include/js/AOS/onScroll.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>

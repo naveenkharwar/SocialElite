@@ -25,7 +25,7 @@ h6 {
 
 #blip h1 {
     font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
-    font-size: 3.5rem;
+    font-size: 6vw !important;
     line-height: 1.15;
     font-family: 'gil-sans';
     font-weight: 600;
@@ -38,50 +38,133 @@ h6 {
 =================================================
 */
 
-nav {
-    top: 40px;
+
+/*PEN STYLES*/
+
+.mainNav {
+    margin-bottom: 10px;
+    background: #efefef;
+    color: #1a1b18;
+    max-height: 70px;
     position: relative;
-    background-color: #fff;
-    font-family: 'Poor Story', cursive;
-    font-weight: 500;
-    width: 50%;
-    height: 90%;
-    text-align: center;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: +2;
 }
 
-nav ul {
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
-    font-size: 25px;
-    list-style-type: none;
+.mainNav a {
+    text-decoration: none;
+}
+
+.mainNav .logo {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.7em;
+    height: 40px;
+    line-height: 1.55em;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    z-index: 0;
+    /*POSITION*/
+    position: relative;
+}
+
+.mainNav .logo:hover:before {
+    background: #292938;
+}
+
+.mainNav .logo:before {
+    content: "";
+    background: #3C91E6;
+    z-index: -1;
+    /*POSITION*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.mainNav .logo a {
+    color: #efefef;
+}
+
+.mainNav .menu {
+    background: #efefef;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #d9d9d9;
+    display: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    padding-top: 1.5%;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav li a {
-    top: 10;
-    display: inline-block;
-    color: #fff;
     text-align: center;
-    padding: 16px;
-    text-decoration: none!important;
+    /*POSITION*/
+    position: relative;
+    top: 60px;
+    right: 0;
+    left: 0;
 }
 
-nav li a:hover {
-    color: #fff;
-}
-
-main {
+.mainNav .menu a {
+    color: #292938;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
     display: block;
-    background-color: blue;
+    padding: 15px;
+}
+
+.mainNav .menu a:hover {
+    background: #292938;
+    color: #efefef;
+}
+
+.mainNav .navBars {
+    display: inline-block;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    float: right;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#xBxHack {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -99999px;
+}
+
+#xBxHack:checked~nav .menu {
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .mainNav {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .mainNav .navBars {
+        display: none;
+    }
+    .mainNav .logo {
+        margin: 10px 0;
+    }
+    .mainNav .menu {
+        display: block;
+        box-shadow: none;
+        border: none;
+        float: right;
+        /*POSITION*/
+        position: static;
+    }
+    .mainNav .menu li {
+        display: inline-block;
+    }
+    .mainNav .menu a {
+        border: none;
+        padding: 20px 10px;
+    }
 }
 
 
@@ -90,6 +173,18 @@ main {
    Header
 =================================================
 */
+
+#particles-js {
+    background-color: #29ABE2;
+    align-items: center;
+    padding: 50px;
+}
+
+#app {
+    padding-top: 30px;
+    font-size: 50px;
+    position: absolute;
+}
 
 .intro {
     height: 400px;
@@ -101,7 +196,7 @@ main {
 }
 
 #blip p {
-    font-size: 1.2em;
+    font-size: 1.5vw;
 }
 
 #blip h1 {
@@ -132,6 +227,7 @@ main {
     margin-right: 10px;
     width: 280px;
     height: 200px;
+    margin: 5px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,6 +245,10 @@ main {
     height: 280px;
     -webkit-box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
     box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.18);
+}
+
+#about h1 {
+    font-size: 70px;
 }
 
 
@@ -337,24 +437,24 @@ main {
 .section.portfolio .filters-content .item {
     text-align: center;
     cursor: pointer;
+}
+
+.work img {
+    margin: 0 auto;
+    width: 80%;
     margin-bottom: 30px;
+    position: relative;
+    -webkit-box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.72);
+    box-shadow: 0 4px 17px 0 rgba(50, 54, 72, 0.72);
+    transition: transform 1.5s;
 }
 
-.section.portfolio .filters-content .item .p-inner {
-    padding: 20px 30px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.section.portfolio .filters-content .item .p-inner h5 {
-    font-size: 15px;
-}
-
-.section.portfolio .filters-content .item .p-inner .cat {
-    font-size: 13px;
-}
-
-.section.portfolio .filters-content .item img {
-    width: 100%;
+.work img:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }
 
 
@@ -497,7 +597,7 @@ main {
 
 .try-it {
     background-color: #f8f9fa;
-    border-radius: 14px!important;
+    border-radius: 14px !important;
     padding: 20px;
 }
 
@@ -514,7 +614,7 @@ main {
 }
 
 form {
-    width: 390px;
+    /* width: 390px; */
 }
 
 #contact input[type=text],
@@ -558,10 +658,6 @@ textarea {
 
 
 /* Add a background color and some padding around the form */
-
-#contact .container {
-    border-radius: 5px;
-}
 
 #contact .name {
     display: inline-block;
@@ -639,11 +735,11 @@ textarea {
 
 .contact1-pic {
     width: 296px;
-    float: right;
+    margin: 0 auto;
 }
 
 .contact1-pic img {
-    max-width: 100%;
+    margin-top: 30px;
 }
 
 .container-contact1-form-btn {
@@ -702,44 +798,170 @@ textarea {
 }
 
 
+/* 
+=================================================
+    footer
+=================================================
+*/
+
+footer {
+    padding: 20px;
+    background-color: #d6d1d13d;
+}
+
+footer img {
+    width: 60%;
+}
+
+footer p {
+    font-weight: 800;
+    color: #808080ad;
+}
+
+footer a {
+    color: #6b6969;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #6b6969;
+}
+
+footer i {
+    padding-right: 15px;
+    font-size: 25px;
+    color: #808080ad;
+}
+
+.underline {
+    border-bottom: 1px solid #808080ad;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.underline:hover {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
-@media (max-width: 1200px) {
-    .contact1-pic {
-        width: 33.5%;
-    }
-    .contact1-form {
-        width: 44%;
-    }
-}
 
-@media (max-width: 992px) {
-    .container-contact1 {
-        padding: 90px 80px 88px 90px;
-    }
-    .contact1-pic {
-        width: 35%;
-    }
-    .contact1-form {
-        width: 55%;
-    }
-}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-@media (max-width: 768px) {
-    .container-contact1 {
-        padding: 90px 80px 88px 80px;
+@media (min-width: 1024px) {
+    #blip {
+        top: 20%;
     }
-    .contact1-pic {
+    #particles-js {
         display: none;
     }
-    .contact1-form {
-        width: 100%;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1280px) {
+    body {}
+    #about .about-img1 {
+        width: 200px;
+    }
+    #blip {
+        top: 30% !important;
+    }
+    #particles-js {
+        display: none;
     }
 }
 
-@media (max-width: 576px) {
-    .container-contact1 {
-        padding: 90px 15px 88px 15px;
+
+/* 
+    ##Screen = 960px
+  */
+
+@media (min-width:960px) and (max-width:960px) {
+    body {
+        /* background-color: #ff8080 */
+    }
+    #price .card {
+        width: 210px;
+    }
+    #blip {
+        top: 25%;
+    }
+    #particles-js {
+        display: none;
+    }
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (max-width: 768px) {
+    header svg {
+        display: none;
+    }
+    #blip {
+        display: none
+    }
+    #about .about-img1 {
+        float: none;
+        width: 100%;
+        height: 200px;
+    }
+    #about .about-img2 {
+        margin-bottom: 10px;
+        float: none;
+        width: 100%;
+    }
+    #price .card {
+        width: 200px
+    }
+}
+
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (max-width: 767px) {
+    body {
+        /* background-color: #23A6D5; */
+    }
+}
+
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (max-width: 425px) {
+    .middle {
+        display: none;
+    }
+    #price .card {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #contact img {
+        display: none;
+    }
+    .work img {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
